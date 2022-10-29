@@ -33,7 +33,7 @@ class Plant with ChangeNotifier {
 
   Future<void> getFavData(String id) async {
     final url =
-        'https://shopappfirebase-50d2e-default-rtdb.firebaseio.com/products/$id.json';
+        '';
     final response = await http.get(Uri.parse(url));
     final extractedFav = json.decode(response.body) as Map<String, dynamic>;
     print(extractedFav);

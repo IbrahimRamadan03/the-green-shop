@@ -36,7 +36,7 @@ Widget buildAppBar(BuildContext ctx) {
 
 }
 Future <void> fetchPlantsData() async{
-    const url ='https://shopappfirebase-50d2e-default-rtdb.firebaseio.com/products.json';
+    const url ='';
     final response= await http.get(Uri.parse(url));
     final extractedData=json.decode(response.body) as Map<String,dynamic>;
     final List <Plant> loadedPlants=[];
